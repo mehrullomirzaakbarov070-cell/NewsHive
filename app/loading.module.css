@@ -1,0 +1,75 @@
+.wrapper {
+  width: min(1200px, calc(100% - 1.5rem));
+  margin: 2rem auto 4rem;
+}
+
+.heroSkeleton {
+  height: 28rem;
+  border-radius: 1.4rem;
+  background: linear-gradient(90deg, rgba(255,255,255,0.04), rgba(255,255,255,0.18), rgba(255,255,255,0.04));
+  background-size: 200% 100%;
+  animation: shimmer 1.2s linear infinite;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.03);
+  border-radius: 1.1rem;
+  overflow: hidden;
+}
+
+.media {
+  height: 220px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.04), rgba(255,255,255,0.18), rgba(255,255,255,0.04));
+  background-size: 200% 100%;
+  animation: shimmer 1.2s linear infinite;
+}
+
+.content {
+  padding: 1rem;
+}
+
+.lineShort,
+.lineFull,
+.button {
+  background: linear-gradient(90deg, rgba(255,255,255,0.04), rgba(255,255,255,0.18), rgba(255,255,255,0.04));
+  background-size: 200% 100%;
+  animation: shimmer 1.2s linear infinite;
+  border-radius: 0.75rem;
+}
+
+.lineShort {
+  width: 30%;
+  height: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.lineFull {
+  width: 100%;
+  height: 0.9rem;
+  margin-bottom: 0.7rem;
+}
+
+.button {
+  width: 6rem;
+  height: 2.8rem;
+  margin-top: 0.8rem;
+}
+
+@keyframes shimmer {
+  from { background-position: 200% 0; }
+  to { background-position: -200% 0; }
+}
+
+@media (max-width: 760px) {
+  .grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}

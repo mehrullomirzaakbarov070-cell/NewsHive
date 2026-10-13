@@ -1,0 +1,74 @@
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1.2rem;
+  overflow: hidden;
+  box-shadow: 0 20px 36px var(--shadow);
+  backdrop-filter: blur(12px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 24px 48px rgba(92, 103, 185, 0.22);
+}
+
+.mediaWrap {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(90, 110, 255, 0.12), rgba(72, 210, 255, 0.1));
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.06);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1rem 1rem 1.15rem;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.7rem;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(1.16rem, 1.4vw, 1.32rem);
+  line-height: 1.35;
+  letter-spacing: -0.04em;
+}
+
+.description {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.96rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 0.72rem 1.1rem;
+  border-radius: 0.9rem;
+  background: var(--gradient);
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 12px 25px rgba(110, 92, 246, 0.3);
+}

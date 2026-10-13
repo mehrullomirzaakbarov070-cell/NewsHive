@@ -1,0 +1,123 @@
+.page {
+  padding: 1.8rem 0 4rem;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 1.2rem;
+}
+
+.article {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  padding: clamp(1rem, 2vw, 2rem);
+  box-shadow: 0 24px 52px var(--shadow);
+}
+
+.hero {
+  margin-bottom: 1.3rem;
+}
+
+.imageWrap {
+  position: relative;
+  height: min(30rem, 60vw);
+  min-height: 18rem;
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.metaBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 1rem 0 0.9rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  line-height: 1.15;
+  letter-spacing: -0.06em;
+}
+
+.content {
+  color: var(--text);
+  font-size: 1.04rem;
+}
+
+.content p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.8rem;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.9rem;
+  font-weight: 700;
+}
+
+.primaryButton {
+  background: var(--gradient);
+  color: white;
+}
+
+.secondaryButton {
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.04);
+  color: var(--text);
+}
+
+.related {
+  margin-top: 2.5rem;
+}
+
+.related h2 {
+  margin-bottom: 1rem;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  letter-spacing: -0.05em;
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (min-width: 720px) {
+  .relatedGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 980px) {
+  .relatedGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

@@ -1,0 +1,54 @@
+.footer {
+  margin-top: 4rem;
+  border-top: 1px solid var(--border);
+  background: rgba(9, 15, 25, 0.3);
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 2rem 0;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.brandMark {
+  display: inline-grid;
+  place-items: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 0.8rem;
+  background: var(--gradient);
+  color: white;
+}
+
+.copy {
+  margin: 0.7rem 0 0;
+  color: var(--muted);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1rem;
+  color: var(--muted);
+}
+
+.links a:hover {
+  color: var(--text);
+}
+
+@media (max-width: 700px) {
+  .inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

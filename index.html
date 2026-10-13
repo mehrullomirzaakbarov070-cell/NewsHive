@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Modern news portal with top headlines, search, categories and a glassmorphism interface."
+    />
+    <title>NewsHive | Yangiliklar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-theme="dark">
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+    <div class="bg-blobs" aria-hidden="true">
+      <span class="blob blob-one"></span>
+      <span class="blob blob-two"></span>
+      <span class="blob blob-three"></span>
+    </div>
+
+    <header class="site-header" id="siteHeader">
+      <div class="container header-inner">
+        <a href="#" class="logo" aria-label="Bosh sahifa">
+          <span class="logo-mark">N</span>
+          <span>NewsHive</span>
+        </a>
+
+        <div class="header-actions">
+          <label class="search-wrap" for="searchInput">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M10.5 3a7.5 7.5 0 015.88 12.8l4.4 4.4 1.4-1.4-4.4-4.4A7.5 7.5 0 1110.5 3zm0 2a5.5 5.5 0 100 11 5.5 5.5 0 000-11z"/>
+            </svg>
+            <input
+              id="searchInput"
+              type="search"
+              aria-label="Yangiliklarni qidiring"
+              placeholder="Yangiliklarni qidiring..."
+            />
+          </label>
+
+          <button id="themeToggle" class="theme-toggle" type="button" aria-label="Qora/yorug rejim">
+            <span class="toggle-track">
+              <span class="toggle-thumb"></span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <nav class="category-bar container" aria-label="Yangilik toifalari">
+      <div class="tab-list" id="categoryTabs"></div>
+    </nav>
+
+    <main class="page-shell container" id="mainContent">
+      <section class="hero-section" aria-label="Taniqli yangilik">
+        <div id="heroCard" class="hero-card"></div>
+      </section>
+
+      <section class="news-section" aria-labelledby="newsTitle">
+        <div class="section-heading">
+          <h2 id="newsTitle">Eng so'nggi yangiliklar</h2>
+          <button id="loadMoreBtn" class="primary-button" type="button">Ko'proq yuklash</button>
+        </div>
+
+        <div id="newsGrid" class="news-grid" aria-live="polite"></div>
+        <div id="skeletonGrid" class="skeleton-grid" aria-hidden="true"></div>
+      </section>
+    </main>
+
+    <button id="scrollTopBtn" class="scroll-top" type="button" aria-label="Yuqoriga qaytish">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 5l7 8h-5v6H10v-6H5l7-8z"/>
+      </svg>
+    </button>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <div id="loadMoreSentinel" class="load-more-sentinel" aria-hidden="true"></div>
+
+    <noscript>
+      <div class="noscript-message">Ushbu sayt ishlashi uchun JavaScript yoqilgan bo'lishi kerak.</div>
+    </noscript>
+
+    <script src="config.js"></script>
+    <script src="app.js" defer></script>
+  </body>
+</html>
